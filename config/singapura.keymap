@@ -9,7 +9,6 @@
     combos {
         compatible = "zmk,combos";
 
-
         combo_esc {
             timeout-ms = <35>;
             key-positions = <0 1>;
@@ -21,7 +20,6 @@
             bindings = <&to 1>;
             key-positions = <31 32 24>;
         };
-
 
         combo_pp {
             timeout-ms = <35>;
@@ -64,7 +62,6 @@
             bindings = <&kp CARET>;
             key-positions = <8 6>;
         };
-
 
         combo_AMPERSAND {
             timeout-ms = <35>;
@@ -138,8 +135,10 @@
             key-positions = <28 29>;
         };
 
-
-
+        combo_no1 {
+            bindings = <&kp NUMBER_1>;
+            key-positions = <34 26>;
+        };
     };
 
     behaviors {
