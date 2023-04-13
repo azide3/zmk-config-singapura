@@ -135,7 +135,6 @@
             key-positions = <28 29>;
         };
 
-
         combo_no1 {
             timeout-ms = <35>;
             bindings = <&kp N1>;
@@ -270,7 +269,7 @@
         combo_to0 {
             timeout-ms = <35>;
             bindings = <&to 0>;
-            key-positions = <30 31>;
+            key-positions = <31 32>;
         };
 
         combo_screenshot {
@@ -290,7 +289,6 @@
             bindings = <&kp LG(RIGHT)>;
             key-positions = <2 4>;
         };
-
     };
 
     behaviors {
