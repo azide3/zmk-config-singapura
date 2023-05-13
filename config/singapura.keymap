@@ -27,7 +27,7 @@
             key-positions = <4 5>;
         };
 
-        new_combo {
+        combo_exclamation {
             timeout-ms = <35>;
             bindings = <&kp EXCLAMATION>;
             key-positions = <1 2>;
@@ -113,13 +113,13 @@
 
         combo_dash {
             timeout-ms = <35>;
-            bindings = <&kp MINUS>;
+            bindings = <&kp KP_MINUS>;
             key-positions = <18 19>;
         };
 
         combo_plus {
             timeout-ms = <35>;
-            bindings = <&kp PLUS>;
+            bindings = <&kp KP_PLUS>;
             key-positions = <19 29>;
         };
 
@@ -327,6 +327,26 @@
   &bt BT_CLR        &trans        &trans        &trans  &trans  &trans  &trans  &trans  &trans  &trans
                                   &trans        &trans  &trans  &trans  &trans  &trans
       &trans        &trans        &trans        &trans  &trans  &trans  &trans  &trans  &trans  &trans
+            >;
+        };
+
+        layer_2 {
+            bindings = <
+&gqt LG(NUMBER_1) Q  &gqt LG(NUMBER_2) 0  &gqt LG(NUMBER_3) 0  &gqt LG(NUMBER_4) 0  &gqt LG(NUMBER_5) 0     &trans  &trans  &trans    &trans  &trans
+             &trans               &trans               &trans               &trans               &trans     &trans  &trans  &trans    &trans  &trans
+             &trans               &trans               &trans               &trans               &trans     &trans  &trans  &trans    &trans  &trans
+                                                       &trans               &trans            &kp ENTER     &trans  &trans  &trans
+          &kp SPACE         &kp UP_ARROW             &kp LEFT            &kp RIGHT             &kp DOWN  &kp MINUS  &trans  &trans  &kp PLUS  &trans
+            >;
+        };
+
+        layer_3 {
+            bindings = <
+    &kp D         &kp J         &kp K            &kp L  &kp BACKSPACE     &trans  &trans  &trans    &trans  &trans
+&kp LC(J)         &kp S         &kp I  &gqt LEFT_GUI O          &kp M     &trans  &trans  &trans    &trans  &trans
+    &kp Z        &trans  &gqt LG(C) 0     &gqt LG(V) 0   &gqt LC(B) 0     &trans  &trans  &trans    &trans  &trans
+                               &trans   &kp LEFT_SHIFT      &kp SPACE     &trans  &trans  &trans
+&kp SPACE  &kp UP_ARROW      &kp LEFT        &kp RIGHT       &kp DOWN  &kp MINUS  &trans  &trans  &kp PLUS  &trans
             >;
         };
     };
