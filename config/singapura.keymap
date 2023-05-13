@@ -332,11 +332,11 @@
 
         layer_2 {
             bindings = <
-&gqt Q NUMBER_1    &kp NUMBER_2  &kp NUMBER_3  &gqt R NUMBER_4  &kp NUMBER_5     &trans  &trans  &trans    &trans  &trans
-       &gqt G D  &kp LEFT_ARROW     &kp RIGHT  &gqt LEFT_GUI F         &kp M     &trans  &trans  &trans    &trans  &trans
-          &kp Z          &trans  &gqt LG(C) C     &gqt LG(V) V         &kp B     &trans  &trans  &trans    &trans  &trans
-                                       &trans   &kp LEFT_SHIFT     &kp ENTER     &trans  &trans  &trans
-      &kp SPACE    &kp UP_ARROW      &kp LEFT        &kp RIGHT      &kp DOWN  &kp MINUS  &trans  &trans  &kp PLUS  &trans
+&gqt Q NUMBER_1    &kp NUMBER_2  &kp NUMBER_3  &gqt R NUMBER_4  &gqt NUMBER_0 NUMBER_5     &trans  &trans  &trans    &trans  &trans
+       &gqt G D  &kp LEFT_ARROW     &kp RIGHT  &gqt LEFT_GUI F                   &kp M     &trans  &trans  &trans    &trans  &trans
+          &kp Z          &trans  &gqt LG(C) C     &gqt LG(V) V                   &kp B     &trans  &trans  &trans    &trans  &trans
+                                       &trans   &kp LEFT_SHIFT               &kp ENTER     &trans  &trans  &trans
+      &kp SPACE    &kp UP_ARROW      &kp LEFT        &kp RIGHT                &kp DOWN  &kp MINUS  &trans  &trans  &kp PLUS  &trans
             >;
         };
 
