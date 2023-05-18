@@ -236,7 +236,7 @@
         };
 
         combo_macro_skmr {
-            bindings = <&trans>;
+            bindings = <&macro_skmr>;
             key-positions = <34 26 31 23>;
         };
     };
