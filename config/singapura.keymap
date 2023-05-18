@@ -234,6 +234,11 @@
             bindings = <&kp MINUS>;
             key-positions = <18 19>;
         };
+
+        combo_macro_skmr {
+            bindings = <&trans>;
+            key-positions = <34 26 31 23>;
+        };
     };
 
     behaviors {
@@ -248,6 +253,15 @@
             bindings =
                 <&kp>,
                 <&kp>;
+        };
+    };
+
+    macros {
+        macro_skmr: macro_skmr {
+            compatible = "zmk,behavior-macro";
+            label = "MACRO_SKMR";
+            #binding-cells = <0>;
+            bindings = <&none &kp LS(I) &kp SPACE &kp F &kp E &kp E &kp L &kp SPACE &kp L &kp I &kp K &kp E &kp SPACE &kp W &kp E &kp SPACE &kp H &kp A &kp V &kp E &kp SPACE &kp G &kp O &kp N &kp E &kp SPACE &kp P &kp A &kp S &kp T &kp SPACE &kp S &kp O &kp C &kp I &kp A &kp L &kp SPACE &kp N &kp O &kp R &kp M &kp S &kp SPACE &kp H &kp A &kp H &kp H &kp A &kp A &kp H &kp A &kp H &kp H &kp H>;
         };
     };
 
