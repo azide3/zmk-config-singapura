@@ -221,13 +221,13 @@
         combo_cmd_left {
             timeout-ms = <35>;
             bindings = <&kp LG(LEFT)>;
-            key-positions = <2 1>;
+            key-positions = <2 0>;
         };
 
         combo_cmd_right {
             timeout-ms = <35>;
             bindings = <&kp LG(RIGHT)>;
-            key-positions = <3 2>;
+            key-positions = <2 4>;
         };
 
         combo_minus {
@@ -238,6 +238,11 @@
         combo_macro_skmr {
             bindings = <&macro_skmr>;
             key-positions = <34 26 31 23>;
+        };
+
+        combo_asterisk {
+            bindings = <&kp KP_ASTERISK>;
+            key-positions = <17 8>;
         };
     };
 
