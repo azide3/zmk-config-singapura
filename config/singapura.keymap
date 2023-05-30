@@ -239,11 +239,6 @@
             bindings = <&macro_skmr>;
             key-positions = <34 26 31 23>;
         };
-
-        combo_asterisk {
-            bindings = <&kp KP_ASTERISK>;
-            key-positions = <17 8>;
-        };
     };
 
     behaviors {
