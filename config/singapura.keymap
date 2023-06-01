@@ -309,7 +309,7 @@
 &gqt TAB A         &kp S   &gqt LALT D     &gqt LGUI F          &gqt LCTRL G           &gqt LALT H    &gqt LGUI J             &gqt LG(K) K               &gqt LG(L) L  &gqt MINUS SEMICOLON
      &kp Z  &gqt LG(X) X  &gqt LG(C) C    &gqt LG(V) V          &gqt LG(B) B          &gqt LG(N) N          &kp M  &gqt LEFT_BRACKET COMMA  &gqt RIGHT_BRACKET PERIOD        &gqt BSLH FSLH
                                 &trans  &kp LEFT_SHIFT  &gqt LS(ENTER) ENTER  &gqt LG(SPACE) SPACE  &kp BACKSPACE                   &trans
- &kp SPACE        &kp UP      &kp LEFT       &kp RIGHT              &kp DOWN              &kp DOWN      &kp RIGHT                 &kp LEFT                     &kp UP             &kp SPACE
+ &to 1        &to 1      &to 1       &to 1              &to 1              &kp DOWN      &kp RIGHT                 &kp LEFT                     &kp UP             &kp SPACE
             >;
         };
 
@@ -318,8 +318,8 @@
 &trans        &trans    &trans     &trans    &trans    &trans     &trans    &trans        &trans  &trans
 &trans        &trans    &trans     &trans    &trans    &trans     &trans    &trans        &trans  &trans
 &trans        &trans    &trans     &trans    &trans    &trans     &trans    &trans        &trans  &trans
-                        &trans     &trans    &trans  &kp LEFT  &kp RIGHT    &trans
-&trans  &kp UP_ARROW  &kp LEFT  &kp RIGHT  &kp DOWN  &kp DOWN  &kp RIGHT  &kp LEFT  &kp UP_ARROW  &trans
+                        &trans     &trans    &trans  &mkp LCLK  &mkp RCLK    &trans
+&to 0  &mmv MOVE_UP  &mmv MOVE_LEFT  &mmv MOVE_RIGHT  &mmv MOVE_DOWN  &kp DOWN  &kp RIGHT  &kp LEFT  &kp UP_ARROW  &trans
             >;
         };
 
