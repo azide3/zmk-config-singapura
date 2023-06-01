@@ -321,7 +321,7 @@
         layer_4 {
             bindings = <
 &trans        &mwh SCROLL_LEFT    &mmv MOVE_UP           &mwh SCROLL_RIGHT          &mwh SCROLL_UP     &trans     &trans    &trans        &trans  &trans
-&trans        &mmv MOVE_LEFT        &mmv MOVE_LEFT           &mmv MOVE_RIGHT          &mwh SCROLL_DOWN     &trans     &trans    &trans        &trans  &trans
+&trans        &mmv MOVE_LEFT        &mmv MOVE_DOWN           &mmv MOVE_RIGHT          &mwh SCROLL_DOWN     &trans     &trans    &trans        &trans  &trans
 &trans        &trans          &trans           &trans          &trans     &trans     &trans    &trans        &trans  &trans
                               &trans           &trans          &trans  &mkp LCLK  &mkp RCLK    &trans
  &to 0  &mmv MOVE_UP  &mmv MOVE_LEFT  &mmv MOVE_RIGHT  &mmv MOVE_DOWN   &kp DOWN  &kp RIGHT  &kp LEFT  &kp UP_ARROW  &trans
