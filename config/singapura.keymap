@@ -2,9 +2,9 @@
 // SPDX-License-Identifier: MIT
 
 #include <behaviors.dtsi>
+#include <dt-bindings/zmk/mouse.h>
 #include <dt-bindings/zmk/bt.h>
 #include <dt-bindings/zmk/keys.h>
-#include <dt-bindings/zmk/mouse.h>
 
 #define U_MOUSE_MOVE_MAX 1400
 
@@ -273,6 +273,11 @@
             bindings = <&macro_skmr>;
             key-positions = <34 26 31 23>;
         };
+
+        combo_to01 {
+            bindings = <&to 1>;
+            key-positions = <33 34>;
+        };
     };
 
     behaviors {
@@ -309,17 +314,17 @@
 &gqt TAB A         &kp S   &gqt LALT D     &gqt LGUI F          &gqt LCTRL G           &gqt LALT H    &gqt LGUI J             &gqt LG(K) K               &gqt LG(L) L  &gqt MINUS SEMICOLON
      &kp Z  &gqt LG(X) X  &gqt LG(C) C    &gqt LG(V) V          &gqt LG(B) B          &gqt LG(N) N          &kp M  &gqt LEFT_BRACKET COMMA  &gqt RIGHT_BRACKET PERIOD        &gqt BSLH FSLH
                                 &trans  &kp LEFT_SHIFT  &gqt LS(ENTER) ENTER  &gqt LG(SPACE) SPACE  &kp BACKSPACE                   &trans
- &to 1        &to 1      &to 1       &to 1              &to 1              &kp DOWN      &kp RIGHT                 &kp LEFT                     &kp UP             &kp SPACE
+     &to 1         &to 1         &to 1           &to 1                 &to 1              &kp DOWN      &kp RIGHT                 &kp LEFT                     &kp UP             &kp SPACE
             >;
         };
 
         layer_4 {
             bindings = <
-&trans        &trans    &trans     &trans    &trans    &trans     &trans    &trans        &trans  &trans
-&trans        &trans    &trans     &trans    &trans    &trans     &trans    &trans        &trans  &trans
-&trans        &trans    &trans     &trans    &trans    &trans     &trans    &trans        &trans  &trans
-                        &trans     &trans    &trans  &mkp LCLK  &mkp RCLK    &trans
-&to 0  &mmv MOVE_UP  &mmv MOVE_LEFT  &mmv MOVE_RIGHT  &mmv MOVE_DOWN  &kp DOWN  &kp RIGHT  &kp LEFT  &kp UP_ARROW  &trans
+&trans        &trans    &kp UP_ARROW           &trans          &trans     &trans     &trans    &trans        &trans  &trans
+&trans        &trans        &kp DOWN           &trans          &trans     &trans     &trans    &trans        &trans  &trans
+&trans        &trans          &trans           &trans          &trans     &trans     &trans    &trans        &trans  &trans
+                              &trans           &trans          &trans  &mkp LCLK  &mkp RCLK    &trans
+ &to 0  &mmv MOVE_UP  &mmv MOVE_LEFT  &mmv MOVE_RIGHT  &mmv MOVE_DOWN   &kp DOWN  &kp RIGHT  &kp LEFT  &kp UP_ARROW  &trans
             >;
         };
 
