@@ -202,7 +202,7 @@
         combo_up {
             timeout-ms = <30>;
             bindings = <&kp UP>;
-            key-positions = <2 3>;
+            key-positions = <2 13>;
         };
 
         combo_down {
