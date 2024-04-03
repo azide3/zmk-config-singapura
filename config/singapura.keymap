@@ -357,7 +357,7 @@
         last_epoch {
             bindings = <
 &kp Q         &kp W   &kp E         &kp R         &kp T                &kp Y                 &kp U     &kp I      &kp O    &kp P
-&gqt TAB A    &kp S   &gqt LCTRL D  &gqt LGUI F   &kp G                &kp H                 &kp J     &kp K      &kp L    &macro_shift_rightclick
+&gqt TAB A    &kp S   &gqt LCTRL D  &gqt LGUI F   &kp G                &kp H                 &kp J     &kp K      &kp L    &kp KP_NUMLOCK
 &gqt SLASH Z  &kp X   &gqt LG(C) C  &gqt LG(V) V  &kp B                &kp N                 &kp M     &kp COMMA  &kp DOT  &kp FSLH
                       &trans        &kp LSHFT     &gqt NUMBER_1 ENTER  &gqt LG(SPACE) SPACE  &kp BSPC  &trans
 &trans        &trans  &trans        &trans        &trans               &trans                &trans    &trans     &trans   &trans
