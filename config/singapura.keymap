@@ -52,7 +52,7 @@
 
         combo_settings {
             timeout-ms = <25>;
-            bindings = <&to 3>;
+            bindings = <&to 5>;
             key-positions = <31 32 24>;
         };
 
@@ -232,7 +232,7 @@
 
         combo_to0 {
             timeout-ms = <15>;
-            bindings = <&to 0>;
+            bindings = <&to 1>;
             key-positions = <31 32>;
         };
 
@@ -267,7 +267,7 @@
 
         combo_to01 {
             timeout-ms = <20>;
-            bindings = <&to 2>;
+            bindings = <&to 3>;
             key-positions = <33 34>;
         };
     };
@@ -289,7 +289,7 @@
             label = "TAP_DANCE_NAV";
             #binding-cells = <0>;
             tapping-term-ms = <200>;
-            bindings = <&to 1>, <&to 2>;
+            bindings = <&to 2>, <&to 3>;
         };
     };
 
@@ -312,14 +312,24 @@
     keymap {
         compatible = "zmk,keymap";
 
+        qwerty {
+            bindings = <
+&kp Q   &kp W   &kp E   &kp R       &kp T             &kp Y      &kp U          &kp I      &kp O    &kp P
+&kp A   &kp S   &kp D   &kp F       &kp G             &kp H      &kp J          &kp K      &kp L    &kp SEMI
+&kp Z   &kp X   &kp C   &kp V       &kp B             &kp N      &kp M          &kp COMMA  &kp DOT  &kp FSLH
+                &trans  &kp LSHIFT  &gqt ENTER SPACE  &kp SPACE  &kp BACKSPACE  &trans
+&trans  &trans  &trans  &trans      &trans            &trans     &trans         &trans     &trans   &trans
+            >;
+        };
+
         base {
             label = "BASE";
             bindings = <
 &gqt TILDE Q  &kp W             &gqt LG(E) E  &gqt LG(R) R    &gqt LG(T) T          &kp Y                 &gqt LG(U) U   &gqt LG(I) I             &gqt LG(O) O               &gqt SINGLE_QUOTE P
 &gqt TAB A    &gqt LS(LG(H)) S  &gqt LALT D   &gqt LGUI F     &gqt LCTRL G          &gqt LALT H           &gqt LGUI J    &gqt LG(K) K             &kp L                      &gqt MINUS SEMICOLON
 &kp Z         &gqt LG(X) X      &gqt LG(C) C  &gqt LG(V) V    &gqt LG(B) B          &gqt LG(N) N          &kp M          &gqt LEFT_BRACKET COMMA  &gqt RIGHT_BRACKET PERIOD  &gqt BSLH FSLH
-                                &trans        &kp LEFT_SHIFT  &gqt LS(ENTER) ENTER  &gqt LG(SPACE) SPACE  &kp BACKSPACE  &tap_dance_nav
-&to 2         &to 2             &to 2         &to 2           &to 2                 &kp DOWN              &kp RIGHT      &kp LEFT                 &kp UP                     &kp SPACE
+                                &mo 2         &kp LEFT_SHIFT  &gqt LS(ENTER) ENTER  &gqt LG(SPACE) SPACE  &kp BACKSPACE  &tap_dance_nav
+&trans        &trans            &trans        &trans          &trans                &kp DOWN              &kp RIGHT      &kp LEFT                 &kp UP                     &kp SPACE
             >;
         };
 
@@ -328,7 +338,7 @@
 &none  &none  &none  &none   &none   &none           &kp LA(LEFT)        &kp UP_ARROW    &kp LA(RIGHT)         &none
 &none  &none  &none  &none   &none   &kt LEFT_SHIFT  &gqt LG(LEFT) LEFT  &kp DOWN_ARROW  &gqt LG(RIGHT) RIGHT  &none
 &none  &none  &none  &none   &none   &none           &kp LG(C)           &none           &kp LG(V)             &none
-              &to 0  &trans  &trans  &kp SPACE       &kp BACKSPACE       &tap_dance_nav
+              &to 1  &trans  &trans  &kp SPACE       &kp BACKSPACE       &tap_dance_nav
 &none  &none  &none  &none   &none   &none           &none               &none           &none                 &none
             >;
         };
@@ -338,15 +348,25 @@
 &trans  &mwh SCROLL_LEFT  &mmv MOVE_UP    &mwh SCROLL_RIGHT  &mwh SCROLL_UP    &trans     &trans     &trans          &trans        &trans
 &trans  &mmv MOVE_LEFT    &mmv MOVE_DOWN  &mmv MOVE_RIGHT    &mwh SCROLL_DOWN  &trans     &trans     &trans          &trans        &trans
 &trans  &trans            &trans          &trans             &trans            &trans     &trans     &trans          &trans        &trans
-                          &to 0           &trans             &trans            &mkp LCLK  &mkp RCLK  &tap_dance_nav
-&to 0   &mmv MOVE_UP      &mmv MOVE_LEFT  &mmv MOVE_RIGHT    &mmv MOVE_DOWN    &kp DOWN   &kp RIGHT  &kp LEFT        &kp UP_ARROW  &trans
+                          &to 1           &trans             &trans            &mkp LCLK  &mkp RCLK  &tap_dance_nav
+&to 1   &mmv MOVE_UP      &mmv MOVE_LEFT  &mmv MOVE_RIGHT    &mmv MOVE_DOWN    &kp DOWN   &kp RIGHT  &kp LEFT        &kp UP_ARROW  &trans
+            >;
+        };
+
+        num {
+            bindings = <
+&none  &kp LA(LEFT)        &kp UP_ARROW  &kp LA(RIGHT)         &none  &none         &kp N7         &kp N8        &kp N9        &kp N0
+&none  &gqt LG(LEFT) LEFT  &kp DOWN      &gqt LG(RIGHT) RIGHT  &none  &kp PLUS      &kp NUMBER_4   &kp N5        &kp NUMBER_6  &kp MINUS
+&none  &none               &none         &none                 &none  &kp ASTERISK  &kp NUMBER_1   &kp NUMBER_2  &kp NUMBER_3  &kp SLASH
+                           &to 1         &none                 &none  &kp SPACE     &kp BACKSPACE  &none
+&none  &none               &none         &none                 &none  &none         &none          &none         &none         &none
             >;
         };
 
         setting {
             bindings = <
 &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4  &trans  &trans  &trans  &trans  &trans  &trans
-&to 4         &to 5         &to 0         &to 6         &trans  &trans  &trans  &trans  &trans  &trans
+&to 6         &to 7         &to 1         &to 0         &trans  &trans  &trans  &trans  &trans  &trans
 &bt BT_CLR    &trans        &trans        &trans        &trans  &trans  &trans  &trans  &trans  &trans
                             &trans        &trans        &trans  &trans  &trans  &trans
 &trans        &trans        &trans        &trans        &trans  &trans  &trans  &trans  &trans  &trans
@@ -370,16 +390,6 @@
 &kp Z      &trans        &gqt LG(C) MINUS  &gqt LG(V) PLUS  &kp LC(LS(E))  &trans  &trans  &trans  &trans  &trans
                          &trans            &kp LEFT_SHIFT   &kp SPACE      &trans  &trans  &trans
 &kp SPACE  &kp UP_ARROW  &kp LEFT          &kp RIGHT        &kp DOWN       &trans  &trans  &trans  &trans  &trans
-            >;
-        };
-
-        qwerty {
-            bindings = <
-&kp Q   &kp W   &kp E   &kp R       &kp T             &kp Y      &kp U          &kp I      &kp O    &kp P
-&kp A   &kp S   &kp D   &kp F       &kp G             &kp H      &kp J          &kp K      &kp L    &kp SEMI
-&kp Z   &kp X   &kp C   &kp V       &kp B             &kp N      &kp M          &kp COMMA  &kp DOT  &kp FSLH
-                &trans  &kp LSHIFT  &gqt ENTER SPACE  &kp SPACE  &kp BACKSPACE  &trans
-&trans  &trans  &trans  &trans      &trans            &trans     &trans         &trans     &trans   &trans
             >;
         };
     };
