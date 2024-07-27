@@ -294,14 +294,14 @@
 &kp A         &kp S   &kp D   &kp F       &kp G             &kp H                 &kp J          &kp K                    &kp L                   &gqt MINUS SEMI
 &kp Z         &kp X   &kp C   &kp V       &kp B             &kp N                 &kp M          &gqt LEFT_BRACKET COMMA  &gqt RIGHT_BRACKET DOT  &gqt BACKSLASH SLASH
                       &mo 1   &kp LSHIFT  &gqt ENTER SPACE  &gqt LG(SPACE) SPACE  &kp BACKSPACE  &tap_dance_nav
-&trans        &trans  &trans  &trans      &trans            &trans                &trans         &trans                   &trans                  &trans
+&none        &none      &none         &none           &none                 &none           &none               &none           &none                 &none
             >;
         };
 
         nav {
             bindings = <
-&none        &kp LEFT   &none         &kp RIGHT       &none                 &none           &kp LA(LEFT)        &kp UP_ARROW    &kp LA(RIGHT)         &none
-&kp LS(TAB)  &sk LCTRL  &sk LEFT_ALT  &sk LEFT_GUI    &kp TAB               &kt LEFT_SHIFT  &gqt LG(LEFT) LEFT  &kp DOWN_ARROW  &gqt LG(RIGHT) RIGHT  &none
+&none        &kp LEFT   &none         &kp RIGHT       &none                 &none           &kp LA(LEFT)        &kp UP_ARROW    &kp LA(RIGHT)         &mwh SCROLL_UP
+&kp LS(TAB)  &sk LCTRL  &sk LEFT_ALT  &sk LEFT_GUI    &kp TAB               &kt LEFT_SHIFT  &gqt LG(LEFT) LEFT  &kp DOWN_ARROW  &gqt LG(RIGHT) RIGHT  &mwh SCROLL_DOWN 
 &none        &kp LG(X)  &kp LG(C)     &kp LG(V)       &none                 &none           &kp LG(C)           &kp LG(X)       &kp LG(V)             &none
                         &to 0         &kp LEFT_SHIFT  &gqt LS(ENTER) ENTER  &kp SPACE       &kp BACKSPACE       &tap_dance_nav
 &none        &none      &none         &none           &none                 &none           &none               &none           &none                 &none
@@ -310,11 +310,11 @@
 
         mouse {
             bindings = <
-&trans  &mwh SCROLL_LEFT  &mmv MOVE_UP    &mwh SCROLL_RIGHT  &mwh SCROLL_UP    &trans     &trans     &trans          &trans        &trans
-&trans  &mmv MOVE_LEFT    &mmv MOVE_DOWN  &mmv MOVE_RIGHT    &mwh SCROLL_DOWN  &trans     &trans     &trans          &trans        &trans
+&trans     &trans     &trans          &trans        &trans &trans  &mwh SCROLL_LEFT  &mmv MOVE_UP    &mwh SCROLL_RIGHT  &mwh SCROLL_UP
+&trans     &trans     &trans          &trans        &trans &trans  &mmv MOVE_LEFT    &mmv MOVE_DOWN  &mmv MOVE_RIGHT    &mwh SCROLL_DOWN  
 &trans  &trans            &trans          &trans             &trans            &trans     &trans     &trans          &trans        &trans
                           &to 0           &trans             &trans            &mkp LCLK  &mkp RCLK  &tap_dance_nav
-&to 8   &mmv MOVE_UP      &mmv MOVE_LEFT  &mmv MOVE_RIGHT    &mmv MOVE_DOWN    &kp DOWN   &kp RIGHT  &kp LEFT        &kp UP_ARROW  &trans
+&none        &none      &none         &none           &none                 &none           &none               &none           &none                 &none
             >;
         };
 
