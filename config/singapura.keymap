@@ -283,6 +283,14 @@
             global-quick-tap;
             bindings = <&kp>, <&kp>;
         };
+
+        tap_dance_nav: tap_dance_nav {
+            compatible = "zmk,behavior-tap-dance";
+            label = "TAP_DANCE_NAV";
+            #binding-cells = <0>;
+            tapping-term-ms = <200>;
+            bindings = <&to 1>, <&to 2>;
+        };
     };
 
     macros {
@@ -310,7 +318,7 @@
 &gqt TILDE Q  &kp W             &gqt LG(E) E  &gqt LG(R) R    &gqt LG(T) T          &kp Y                 &gqt LG(U) U   &gqt LG(I) I             &gqt LG(O) O               &gqt SINGLE_QUOTE P
 &gqt TAB A    &gqt LS(LG(H)) S  &gqt LALT D   &gqt LGUI F     &gqt LCTRL G          &gqt LALT H           &gqt LGUI J    &gqt LG(K) K             &kp L                      &gqt MINUS SEMICOLON
 &kp Z         &gqt LG(X) X      &gqt LG(C) C  &gqt LG(V) V    &gqt LG(B) B          &gqt LG(N) N          &kp M          &gqt LEFT_BRACKET COMMA  &gqt RIGHT_BRACKET PERIOD  &gqt BSLH FSLH
-                                &to 1         &kp LEFT_SHIFT  &gqt LS(ENTER) ENTER  &gqt LG(SPACE) SPACE  &kp BACKSPACE  &trans
+                                &trans        &kp LEFT_SHIFT  &gqt LS(ENTER) ENTER  &gqt LG(SPACE) SPACE  &kp BACKSPACE  &tap_dance_nav
 &to 2         &to 2             &to 2         &to 2           &to 2                 &kp DOWN              &kp RIGHT      &kp LEFT                 &kp UP                     &kp SPACE
             >;
         };
@@ -320,18 +328,18 @@
 &none  &none  &none  &none   &none   &none           &kp LA(LEFT)        &kp UP_ARROW    &kp LA(RIGHT)         &none
 &none  &none  &none  &none   &none   &kt LEFT_SHIFT  &gqt LG(LEFT) LEFT  &kp DOWN_ARROW  &gqt LG(RIGHT) RIGHT  &none
 &none  &none  &none  &none   &none   &none           &kp LG(C)           &none           &kp LG(V)             &none
-              &to 0  &trans  &trans  &kp SPACE       &kp BACKSPACE       &none
+              &to 0  &trans  &trans  &kp SPACE       &kp BACKSPACE       &tap_dance_nav
 &none  &none  &none  &none   &none   &none           &none               &none           &none                 &none
             >;
         };
 
         mouse {
             bindings = <
-&trans  &mwh SCROLL_LEFT  &mmv MOVE_UP    &mwh SCROLL_RIGHT  &mwh SCROLL_UP    &trans     &trans     &trans    &trans        &trans
-&trans  &mmv MOVE_LEFT    &mmv MOVE_DOWN  &mmv MOVE_RIGHT    &mwh SCROLL_DOWN  &trans     &trans     &trans    &trans        &trans
-&trans  &trans            &trans          &trans             &trans            &trans     &trans     &trans    &trans        &trans
-                          &trans          &trans             &trans            &mkp LCLK  &mkp RCLK  &trans
-&to 0   &mmv MOVE_UP      &mmv MOVE_LEFT  &mmv MOVE_RIGHT    &mmv MOVE_DOWN    &kp DOWN   &kp RIGHT  &kp LEFT  &kp UP_ARROW  &trans
+&trans  &mwh SCROLL_LEFT  &mmv MOVE_UP    &mwh SCROLL_RIGHT  &mwh SCROLL_UP    &trans     &trans     &trans          &trans        &trans
+&trans  &mmv MOVE_LEFT    &mmv MOVE_DOWN  &mmv MOVE_RIGHT    &mwh SCROLL_DOWN  &trans     &trans     &trans          &trans        &trans
+&trans  &trans            &trans          &trans             &trans            &trans     &trans     &trans          &trans        &trans
+                          &to 0           &trans             &trans            &mkp LCLK  &mkp RCLK  &tap_dance_nav
+&to 0   &mmv MOVE_UP      &mmv MOVE_LEFT  &mmv MOVE_RIGHT    &mmv MOVE_DOWN    &kp DOWN   &kp RIGHT  &kp LEFT        &kp UP_ARROW  &trans
             >;
         };
 
