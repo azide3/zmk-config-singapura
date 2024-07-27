@@ -200,30 +200,6 @@
             key-positions = <14 13 15 16>;
         };
 
-        combo_up {
-            timeout-ms = <30>;
-            bindings = <&kp UP>;
-            key-positions = <2 13>;
-        };
-
-        combo_down {
-            timeout-ms = <30>;
-            bindings = <&kp DOWN>;
-            key-positions = <12 23>;
-        };
-
-        combo_left {
-            timeout-ms = <30>;
-            bindings = <&kp LEFT>;
-            key-positions = <11 12>;
-        };
-
-        combo_right {
-            timeout-ms = <30>;
-            bindings = <&kp RIGHT>;
-            key-positions = <12 13>;
-        };
-
         combo_spaces {
             timeout-ms = <30>;
             bindings = <&kp LC(UP)>;
@@ -232,7 +208,7 @@
 
         combo_to0 {
             timeout-ms = <15>;
-            bindings = <&to 1>;
+            bindings = <&to 0>;
             key-positions = <31 32>;
         };
 
@@ -366,7 +342,7 @@
         setting {
             bindings = <
 &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4  &trans  &trans  &trans  &trans  &trans  &trans
-&to 6         &to 7         &to 1         &to 0         &trans  &trans  &trans  &trans  &trans  &trans
+&to 6         &to 7         &to 1         &to 8         &trans  &trans  &trans  &trans  &trans  &trans
 &bt BT_CLR    &trans        &trans        &trans        &trans  &trans  &trans  &trans  &trans  &trans
                             &trans        &trans        &trans  &trans  &trans  &trans
 &trans        &trans        &trans        &trans        &trans  &trans  &trans  &trans  &trans  &trans
@@ -390,6 +366,16 @@
 &kp Z      &trans        &gqt LG(C) MINUS  &gqt LG(V) PLUS  &kp LC(LS(E))  &trans  &trans  &trans  &trans  &trans
                          &trans            &kp LEFT_SHIFT   &kp SPACE      &trans  &trans  &trans
 &kp SPACE  &kp UP_ARROW  &kp LEFT          &kp RIGHT        &kp DOWN       &trans  &trans  &trans  &trans  &trans
+            >;
+        };
+
+        bg3 {
+            bindings = <
+&kp Q   &kp W   &kp E   &kp R       &kp T             &kp Y      &kp U          &kp I      &kp O    &kp P
+&kp A   &kp S   &kp D   &kp F       &kp G             &kp H      &kp J          &kp K      &kp L    &kp SEMI
+&kp Z   &kp X   &kp C   &kp V       &kp B             &kp N      &kp M          &kp COMMA  &kp DOT  &kp FSLH
+                &trans  &kp LSHIFT  &gqt ENTER SPACE  &kp SPACE  &kp BACKSPACE  &trans
+&trans  &trans  &trans  &trans      &trans            &trans     &trans         &trans     &trans   &trans
             >;
         };
     };
