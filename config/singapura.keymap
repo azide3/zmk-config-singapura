@@ -290,11 +290,11 @@
 
         qwerty {
             bindings = <
-&kp Q   &kp W   &kp E   &kp R       &kp T             &kp Y                 &kp U          &kp I           &kp O    &kp P
-&kp A   &kp S   &kp D   &kp F       &kp G             &kp H                 &kp J          &kp K           &kp L    &kp SEMI
-&kp Z   &kp X   &kp C   &kp V       &kp B             &kp N                 &kp M          &kp COMMA       &kp DOT  &kp FSLH
+&kp Q   &kp W   &kp E   &kp R       &kp T             &kp Y                 &kp U          &kp I                    &kp O                   &gqt SINGLE_QUOTE P
+&kp A   &kp S   &kp D   &kp F       &kp G             &kp H                 &kp J          &kp K                    &kp L                   &gqt MINUS SEMI
+&kp Z   &kp X   &kp C   &kp V       &kp B             &kp N                 &kp M          &gqt LEFT_BRACKET COMMA  &gqt RIGHT_BRACKET DOT  &gqt BACKSLASH SLASH
                 &mo 2   &kp LSHIFT  &gqt ENTER SPACE  &gqt LG(SPACE) SPACE  &kp BACKSPACE  &tap_dance_nav
-&trans  &trans  &trans  &trans      &trans            &trans                &trans         &trans          &trans   &trans
+&trans  &trans  &trans  &trans      &trans            &trans                &trans         &trans                   &trans                  &trans
             >;
         };
 
