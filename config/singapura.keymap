@@ -289,7 +289,7 @@
 
         nav {
             bindings = <
-&none  &none      &gqt LG(LEFT) LS(LC(TAB))  &gqt LG(RIGHT) LC(TAB)  &kp LG(Z)             &kp LS(LC(TAB))  &kp LA(LEFT)        &kp UP_ARROW    &kp LA(RIGHT)         &kp LC(TAB)
+&none  &kp LG(W)  &gqt LG(LEFT) LS(LC(TAB))  &gqt LG(RIGHT) LC(TAB)  &kp LG(Z)             &kp LS(LC(TAB))  &kp LA(LEFT)        &kp UP_ARROW    &kp LA(RIGHT)         &kp LC(TAB)
 &none  &sk LCTRL  &sk LEFT_ALT               &sk LEFT_GUI            &kp LG(Y)             &kt LEFT_SHIFT   &gqt LG(LEFT) LEFT  &kp DOWN_ARROW  &gqt LG(RIGHT) RIGHT  &none
 &none  &kp LG(X)  &kp LG(C)                  &kp LG(V)               &none                 &none            &kp LG(C)           &kp LG(X)       &kp LG(V)             &none
                   &to 0                      &kp LEFT_SHIFT          &gqt LS(ENTER) ENTER  &kp SPACE        &kp BACKSPACE       &tap_dance_nav
