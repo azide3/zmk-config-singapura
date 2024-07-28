@@ -173,13 +173,13 @@
         combo_leftscreen {
             timeout-ms = <25>;
             bindings = <&kp LC(LEFT)>;
-            key-positions = <5 15>;
+            key-positions = <0 10>;
         };
 
         combo_rightscreen {
             timeout-ms = <25>;
             bindings = <&kp LC(RIGHT)>;
-            key-positions = <9 19>;
+            key-positions = <4 14>;
         };
 
         combo_nexttrack {
