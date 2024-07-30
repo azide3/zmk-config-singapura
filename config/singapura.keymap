@@ -247,7 +247,7 @@
             label = "TAP_DANCE_NAV";
             #binding-cells = <0>;
             tapping-term-ms = <200>;
-            bindings = <&to 1>, <&to 2>, <&to 4>;
+            bindings = <&to 1>, <&to 2>, <&to 3>;
         };
 
         tap_dance_mo1_to1: tap_dance_mo1_to1 {
