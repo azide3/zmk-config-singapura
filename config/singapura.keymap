@@ -279,21 +279,21 @@
 
         qwerty {
             bindings = <
-&gqt TILDE Q  &kp W   &gqt LG(E) E        &gqt LG(R) R  &gqt LG(T) T          &kp Y                 &gqt LG(U) U     &gqt LG(I) I             &kp O                   &gqt SINGLE_QUOTE P
-&gqt LG(A) A  &kp S   &kp D               &kp F         &gqt TAB G            &gqt LEFT_ALT H       &gqt LEFT_GUI J  &gqt LG(K) K             &gqt LG(L) L            &gqt MINUS SEMI
-&kp Z         &kp X   &gqt LG(C) C        &gqt LG(V) V  &gqt LG(B) B          &gqt LG(N) N          &kp M            &gqt LEFT_BRACKET COMMA  &gqt RIGHT_BRACKET DOT  &gqt BACKSLASH SLASH
-                      &tap_dance_mo1_to1  &kp LSHIFT    &gqt LS(ENTER) ENTER  &gqt LG(SPACE) SPACE  &kp BACKSPACE    &tap_dance_nav
-&trans        &trans  &trans              &trans        &trans                &trans                &trans           &trans                   &trans                  &trans
+&gqt TILDE Q  &kp W   &gqt LG(E) E  &gqt LG(R) R  &gqt LG(T) T          &gqt LG(Y) Y          &gqt LG(U) U     &gqt LG(I) I             &gqt LG(O) O            &gqt SINGLE_QUOTE P
+&gqt LG(A) A  &kp S   &kp D         &kp F         &gqt TAB G            &gqt LEFT_ALT H       &gqt LEFT_GUI J  &gqt LG(K) K             &gqt LG(L) L            &gqt MINUS SEMI
+&kp Z         &kp X   &gqt LG(C) C  &gqt LG(V) V  &gqt LG(B) B          &gqt LG(N) N          &kp M            &gqt LEFT_BRACKET COMMA  &gqt RIGHT_BRACKET DOT  &gqt BACKSLASH SLASH
+                      &mo 1         &kp LSHIFT    &gqt LS(ENTER) ENTER  &gqt LG(SPACE) SPACE  &kp BACKSPACE    &tap_dance_nav
+&trans        &trans  &trans        &trans        &trans                &trans                &trans           &trans                   &trans                  &trans
             >;
         };
 
         nav {
             bindings = <
-&kp PAGE_UP    &none      &gqt LG(LEFT) LS(LC(TAB))  &gqt LG(RIGHT) LC(TAB)  &kp LG(Z)             &kp LS(LC(TAB))  &kp LA(LEFT)        &kp UP_ARROW    &kp LA(RIGHT)         &kp LC(TAB)
-&kp PAGE_DOWN  &none      &sk LEFT_ALT               &sk LEFT_GUI            &sk LCTRL             &kt LEFT_SHIFT   &gqt LG(LEFT) LEFT  &kp DOWN_ARROW  &gqt LG(RIGHT) RIGHT  &none
-&none          &kp LG(X)  &kp LG(C)                  &kp LG(V)               &kp LG(Y)             &none            &kp LG(C)           &kp LG(X)       &kp LG(V)             &none
-                          &to 0                      &kp LEFT_SHIFT          &gqt LS(ENTER) ENTER  &kp SPACE        &kp BACKSPACE       &tap_dance_nav
-&none          &none      &none                      &none                   &none                 &none            &none               &none           &none                 &none
+&kp PAGE_UP    &none      &gqt LG(LEFT) LS(LC(TAB))  &gqt LG(RIGHT) LC(TAB)  &kp LG(Z)             &kp LS(LA(LEFT))  &kp LA(LEFT)        &kp UP_ARROW    &kp LA(RIGHT)         &kp LS(LA(RIGHT))
+&kp PAGE_DOWN  &none      &sk LEFT_ALT               &sk LEFT_GUI            &sk LCTRL             &kp LG(LS(LEFT))  &gqt LG(LEFT) LEFT  &kp DOWN_ARROW  &gqt LG(RIGHT) RIGHT  &kp LG(LS(RIGHT))
+&none          &kp LG(X)  &kp LG(C)                  &kp LG(V)               &kp LG(Y)             &none             &kp LG(C)           &kp LG(X)       &kp LG(V)             &none
+                          &to 0                      &kp LEFT_SHIFT          &gqt LS(ENTER) ENTER  &kp SPACE         &kp BACKSPACE       &tap_dance_nav
+&none          &none      &none                      &none                   &none                 &none             &none               &none           &none                 &none
             >;
         };
 
