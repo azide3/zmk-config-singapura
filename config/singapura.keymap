@@ -279,11 +279,11 @@
 
         qwerty {
             bindings = <
-&gqt TILDE Q  &kp W   &gqt LG(E) E  &gqt LG(R) R  &gqt LG(T) T          &gqt LG(Y) Y          &gqt LG(U) U     &gqt LG(I) I             &gqt LG(O) O            &gqt SINGLE_QUOTE P
-&gqt LG(A) A  &kp S   &kp D         &kp F         &gqt TAB G            &gqt LEFT_ALT H       &gqt LEFT_GUI J  &gqt LG(K) K             &gqt LG(L) L            &gqt MINUS SEMI
-&kp Z         &kp X   &gqt LG(C) C  &gqt LG(V) V  &gqt LG(B) B          &gqt LG(N) N          &kp M            &gqt LEFT_BRACKET COMMA  &gqt RIGHT_BRACKET DOT  &gqt BACKSLASH SLASH
-                      &mo 1         &kp LSHIFT    &gqt LS(ENTER) ENTER  &gqt LG(SPACE) SPACE  &kp BACKSPACE    &tap_dance_nav
-&trans        &trans  &trans        &trans        &trans                &trans                &trans           &trans                   &trans                  &trans
+&gqt TILDE Q  &kp W         &gqt LG(E) E  &gqt LG(R) R  &gqt LG(T) T          &gqt LG(Y) Y          &gqt LG(U) U     &gqt LG(I) I             &gqt LG(O) O            &gqt SINGLE_QUOTE P
+&gqt LG(A) A  &gqt LG(S) S  &kp D         &kp F         &gqt TAB G            &gqt LEFT_ALT H       &gqt LEFT_GUI J  &gqt LG(K) K             &gqt LG(L) L            &gqt MINUS SEMI
+&kp Z         &kp X         &gqt LG(C) C  &gqt LG(V) V  &gqt LG(B) B          &gqt LG(N) N          &kp M            &gqt LEFT_BRACKET COMMA  &gqt RIGHT_BRACKET DOT  &gqt BACKSLASH SLASH
+                            &mo 1         &kp LSHIFT    &gqt LS(ENTER) ENTER  &gqt LG(SPACE) SPACE  &kp BACKSPACE    &tap_dance_nav
+&trans        &trans        &trans        &trans        &trans                &trans                &trans           &trans                   &trans                  &trans
             >;
         };
 
@@ -309,11 +309,11 @@
 
         num {
             bindings = <
-&none  &kp LA(LEFT)        &kp UP_ARROW  &kp LA(RIGHT)         &none  &kp LEFT_ALT  &kp N7         &kp N8        &kp N9        &kp N0
-&none  &gqt LG(LEFT) LEFT  &kp DOWN      &gqt LG(RIGHT) RIGHT  &none  &kp PLUS      &kp NUMBER_4   &kp N5        &kp NUMBER_6  &kp MINUS
-&none  &none               &none         &none                 &none  &kp ASTERISK  &kp NUMBER_1   &kp NUMBER_2  &kp NUMBER_3  &kp SLASH
-                           &to 0         &none                 &none  &kp SPACE     &kp BACKSPACE  &none
-&none  &none               &none         &none                 &none  &none         &none          &none         &none         &none
+&kp LA(LS(LEFT_ARROW))  &kp LA(LEFT)        &kp UP_ARROW  &kp LA(RIGHT)         &kp LS(LA(RIGHT))     &none         &kp N7         &kp N8        &kp N9        &kp N0
+&kp LS(LG(LEFT))        &gqt LG(LEFT) LEFT  &kp DOWN      &gqt LG(RIGHT) RIGHT  &kp LS(LG(RIGHT))     &kp PLUS      &kp NUMBER_4   &kp N5        &kp NUMBER_6  &kp MINUS
+&none                   &none               &none         &none                 &none                 &kp ASTERISK  &kp NUMBER_1   &kp NUMBER_2  &kp NUMBER_3  &kp SLASH
+                                            &to 0         &kp LEFT_SHIFT        &gqt LS(ENTER) ENTER  &kp SPACE     &kp BACKSPACE  &none
+&none                   &none               &none         &none                 &none                 &none         &none          &none         &none         &none
             >;
         };
 
