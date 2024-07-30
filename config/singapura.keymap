@@ -52,7 +52,7 @@
 
         combo_settings {
             timeout-ms = <25>;
-            bindings = <&to 5>;
+            bindings = <&to 4>;
             key-positions = <31 32 24>;
         };
 
