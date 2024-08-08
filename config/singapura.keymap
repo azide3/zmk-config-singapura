@@ -4,7 +4,6 @@
 #include <behaviors.dtsi>
 #include <dt-bindings/zmk/bt.h>
 #include <dt-bindings/zmk/keys.h>
-#include <dt-bindings/zmk/keys.h>
 #include <dt-bindings/zmk/mouse.h>
 
 #define U_MOUSE_MOVE_MAX 1400
@@ -250,11 +249,11 @@
             bindings = <&to 1>, <&to 2>, <&to 3>;
         };
 
-        tap_dance_mo1_to1: tap_dance_mo1_to1 {
+        tap_dance_mo1_to0: tap_dance_mo1_to0 {
             compatible = "zmk,behavior-tap-dance";
-            label = "TAP_DANCE_MO1_TO1";
+            label = "TAP_DANCE_MO1_TO0";
             #binding-cells = <0>;
-            bindings = <&mo 1>, <&to 1>;
+            bindings = <&mo 1>, <&to 0>;
         };
     };
 
@@ -282,7 +281,7 @@
 &gqt TILDE Q  &kp W         &gqt LG(E) E  &gqt LG(R) R     &gqt LG(T) T          &gqt LG(Y) Y          &gqt LG(U) U     &gqt LG(I) I             &gqt LG(O) O            &gqt SINGLE_QUOTE P
 &gqt LG(A) A  &gqt LG(S) S  &gqt TAB D    &gqt LEFT_GUI F  &gqt LEFT_ALT G       &gqt LEFT_ALT H       &gqt LEFT_GUI J  &gqt LG(K) K             &gqt LG(L) L            &gqt MINUS SEMI
 &kp Z         &kp X         &gqt LG(C) C  &gqt LG(V) V     &gqt LG(B) B          &gqt LG(N) N          &kp M            &gqt LEFT_BRACKET COMMA  &gqt RIGHT_BRACKET DOT  &gqt BACKSLASH SLASH
-                            &mo 1         &kp LSHIFT       &gqt LS(ENTER) ENTER  &gqt LG(SPACE) SPACE  &kp BACKSPACE    &tap_dance_nav
+                            &mo 1         &kp LSHIFT       &gqt LS(ENTER) ENTER  &gqt LG(SPACE) SPACE  &kp BACKSPACE    &to 1
 &trans        &trans        &trans        &trans           &trans                &trans                &trans           &trans                   &trans                  &trans
             >;
         };
@@ -292,18 +291,18 @@
 &kp PAGE_UP    &none           &gqt LG(LEFT) LS(LC(TAB))  &gqt LG(RIGHT) LC(TAB)  &kp LG(Z)             &kp LS(LA(LEFT))  &kp LA(LEFT)        &gqt LG(UP_ARROW) UP_ARROW  &kp LA(RIGHT)         &kp LS(LA(RIGHT))
 &kp PAGE_DOWN  &kp LEFT_SHIFT  &sk LEFT_ALT               &sk LEFT_GUI            &sk LCTRL             &kp LS(LG(LEFT))  &gqt LG(LEFT) LEFT  &gqt LG(DOWN_ARROW) DOWN    &gqt LG(RIGHT) RIGHT  &kp LS(LG(RIGHT))
 &none          &kp LG(X)       &kp LG(C)                  &kp LG(V)               &kp LG(Y)             &none             &kp LG(C)           &kp LG(X)                   &kp LG(V)             &none
-                               &to 0                      &kp LEFT_SHIFT          &gqt LS(ENTER) ENTER  &kp SPACE         &kp BACKSPACE       &tap_dance_nav
+                               &to 0                      &kp LEFT_SHIFT          &gqt LS(ENTER) ENTER  &kp SPACE         &kp BACKSPACE       &to 2
 &none          &none           &none                      &none                   &none                 &none             &none               &none                       &none                 &none
             >;
         };
 
         mouse {
             bindings = <
-&kp PAGE_UP    &kp LG(W)  &gqt LG(LEFT) LC(LS(TAB))  &gqt LG(RIGHT) LC(TAB)  &mwh SCROLL_UP    &none       &mwh SCROLL_LEFT  &mmv MOVE_UP    &mwh SCROLL_RIGHT  &mwh SCROLL_UP
-&kp PAGE_DOWN  &none      &mkp RCLK                  &mkp LCLK               &mwh SCROLL_DOWN  &kt LSHIFT  &mmv MOVE_LEFT    &mmv MOVE_DOWN  &mmv MOVE_RIGHT    &mwh SCROLL_DOWN
-&none          &kp LG(X)  &kp LG(C)                  &kp LG(V)               &none             &none       &none             &none           &none              &none
-                          &to 0                      &none                   &none             &mkp LCLK   &mkp RCLK         &tap_dance_nav
-&none          &none      &none                      &none                   &none             &none       &none             &none           &none              &none
+&kp PAGE_UP    &kp LG(W)  &gqt LG(LEFT) LC(LS(TAB))  &gqt LG(RIGHT) LC(TAB)  &mwh SCROLL_UP    &kp PAGE_UP    &mwh SCROLL_LEFT  &mmv MOVE_UP    &mwh SCROLL_RIGHT  &mwh SCROLL_UP
+&kp PAGE_DOWN  &none      &mkp RCLK                  &mkp LCLK               &mwh SCROLL_DOWN  &kp PAGE_DOWN  &mmv MOVE_LEFT    &mmv MOVE_DOWN  &mmv MOVE_RIGHT    &mwh SCROLL_DOWN
+&none          &kp LG(X)  &kp LG(C)                  &kp LG(V)               &none             &none          &none             &none           &none              &none
+                          &tap_dance_mo1_to0         &none                   &none             &mkp LCLK      &mkp RCLK         &to 0
+&none          &none      &none                      &none                   &none             &none          &none             &none           &none              &none
             >;
         };
 
