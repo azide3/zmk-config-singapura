@@ -279,7 +279,7 @@
         qwerty {
             bindings = <
 &gqt TILDE Q  &kp W         &gqt LG(E) E  &kp R            &gqt LG(T) T          &gqt LG(Y) Y          &gqt LG(U) U     &gqt LG(I) I             &kp O                   &gqt SINGLE_QUOTE P
-&gqt LG(A) A  &gqt LG(S) S  &kp D         &gqt LEFT_GUI F  &gqt TAB G            &gqt LCTRL H          &gqt LEFT_GUI J  &gqt LG(K) K             &gqt LG(L) L            &gqt MINUS SEMI
+&gqt LG(A) A  &gqt LG(S) S  &kp D         &gqt LEFT_GUI F  &gqt TAB G            &gqt LEFT_ALT H       &gqt LEFT_GUI J  &gqt LG(K) K             &gqt LG(L) L            &gqt MINUS SEMI
 &kp Z         &kp X         &gqt LG(C) C  &gqt LG(V) V     &gqt LG(B) B          &gqt LG(N) N          &kp M            &gqt LEFT_BRACKET COMMA  &gqt RIGHT_BRACKET DOT  &gqt BACKSLASH SLASH
                             &mo 1         &kp LSHIFT       &gqt LS(ENTER) ENTER  &gqt LG(SPACE) SPACE  &kp BACKSPACE    &to 1
 &trans        &trans        &trans        &trans           &trans                &trans                &trans           &trans                   &trans                  &trans
