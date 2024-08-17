@@ -249,11 +249,13 @@
             bindings = <&to 1>, <&to 2>, <&to 3>;
         };
 
-        tap_dance_mo1_to0: tap_dance_mo1_to0 {
+        tap_dance_homerow: tap_dance_homerow {
             compatible = "zmk,behavior-tap-dance";
-            label = "TAP_DANCE_MO1_TO0";
+            label = "TAP_DANCE_HOMEROW";
             #binding-cells = <0>;
-            bindings = <&mo 1>, <&to 0>;
+            bindings =
+                <&kp LS(LA(LC(LG(SQT))))>,
+                <&kp LS(LA(LC(LG(NON_US_BACKSLASH))))>;
         };
     };
 
@@ -265,11 +267,12 @@
             bindings = <&none &kp LS(I) &kp SPACE &kp F &kp E &kp E &kp L &kp SPACE &kp L &kp I &kp K &kp E &kp SPACE &kp W &kp E &kp SPACE &kp H &kp A &kp V &kp E &kp SPACE &kp G &kp O &kp N &kp E &kp SPACE &kp P &kp A &kp S &kp T &kp SPACE &kp S &kp O &kp C &kp I &kp A &kp L &kp SPACE &kp N &kp O &kp R &kp M &kp S &kp SPACE &kp H &kp A &kp H &kp H &kp A &kp A &kp H &kp A &kp H &kp H &kp H>;
         };
 
-        macro_shift_rightclick: macro_shift_rightclick {
+        marco_task_switcher: task_switcher {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&kp LEFT_SHIFT &mkp MB2>;
-            label = "MACRO_SHIFT_RIGHTCLICK";
+            bindings = <&kp LG(TAB)>, <&macro_release>, <&kp LEFT_GUI>;
+
+            label = "TASK_SWITCHER";
         };
     };
 
@@ -278,21 +281,21 @@
 
         qwerty {
             bindings = <
-&gqt TILDE Q  &kp W         &gqt LG(E) E  &kp R            &gqt LG(T) T          &gqt LG(Y) Y          &gqt LG(U) U     &gqt LG(I) I             &kp O                   &gqt SINGLE_QUOTE P
-&gqt LG(A) A  &gqt LG(S) S  &kp D         &gqt LEFT_GUI F  &gqt TAB G            &gqt LEFT_ALT H       &gqt LEFT_GUI J  &gqt LG(K) K             &gqt LG(L) L            &gqt MINUS SEMI
-&kp Z         &kp X         &gqt LG(C) C  &gqt LG(V) V     &gqt LG(B) B          &gqt LG(N) N          &kp M            &gqt LEFT_BRACKET COMMA  &gqt RIGHT_BRACKET DOT  &gqt BACKSLASH SLASH
-                            &mo 1         &kp LSHIFT       &gqt LS(ENTER) ENTER  &gqt LG(SPACE) SPACE  &kp BACKSPACE    &to 1
-&trans        &trans        &trans        &trans           &trans                &trans                &trans           &trans                   &trans                  &trans
+&gqt TILDE Q  &kp W         &gqt LG(E) E  &kp R            &gqt LG(T) T          &gqt LG(Y) Y          &kp U                         &kp I                    &kp O                   &gqt SINGLE_QUOTE P
+&gqt LG(A) A  &gqt LG(S) S  &kp D         &gqt LEFT_GUI F  &gqt TAB G            &gqt LEFT_ALT H       &kp J                         &kp K                    &kp L                   &gqt MINUS SEMI
+&kp Z         &kp X         &gqt LG(C) C  &gqt LG(V) V     &gqt LG(B) B          &gqt LG(N) N          &kp M                         &gqt LEFT_BRACKET COMMA  &gqt RIGHT_BRACKET DOT  &gqt BACKSLASH SLASH
+                            &mo 1         &kp LSHIFT       &gqt LS(ENTER) ENTER  &gqt LG(SPACE) SPACE  &gqt LG(BACKSPACE) BACKSPACE  &to 1
+&trans        &trans        &trans        &trans           &trans                &trans                &trans                        &trans                   &trans                  &trans
             >;
         };
 
         nav {
             bindings = <
-&kp PAGE_UP    &none           &gqt LG(LEFT) LS(LC(TAB))  &gqt LG(RIGHT) LC(TAB)  &kp LG(Z)             &kp LS(LA(LEFT))  &kp LA(LEFT)        &gqt LG(UP_ARROW) UP_ARROW  &kp LA(RIGHT)         &kp LS(LA(RIGHT))
-&kp PAGE_DOWN  &kp LEFT_SHIFT  &sk LEFT_ALT               &sk LEFT_GUI            &sk LCTRL             &kp LS(LG(LEFT))  &gqt LG(LEFT) LEFT  &gqt LG(DOWN_ARROW) DOWN    &gqt LG(RIGHT) RIGHT  &kp LS(LG(RIGHT))
-&none          &kp LG(X)       &kp LG(C)                  &kp LG(V)               &kp LG(LS(Z))         &none             &kp LG(C)           &kp LG(X)                   &kp LG(V)             &none
-                               &to 0                      &kp LEFT_SHIFT          &gqt LS(ENTER) ENTER  &kp SPACE         &kp BACKSPACE       &to 2
-&none          &none           &none                      &none                   &none                 &none             &none               &none                       &none                 &none
+&kp PAGE_UP    &marco_task_switcher  &gqt LG(LEFT) LS(LC(TAB))  &gqt LG(RIGHT) LC(TAB)  &kp LG(Z)             &kp LS(LA(LEFT))  &kp LA(LEFT)        &kp LG(UP_ARROW)          &kp LA(RIGHT)         &kp LS(LA(RIGHT))
+&kp PAGE_DOWN  &kp LEFT_SHIFT        &sk LEFT_ALT               &sk LEFT_GUI            &sk LCTRL             &kp LS(LG(LEFT))  &gqt LG(LEFT) LEFT  &gqt LG(DOWN_ARROW) DOWN  &gqt LG(RIGHT) RIGHT  &kp LS(LG(RIGHT))
+&none          &kp LG(X)             &kp LG(C)                  &kp LG(V)               &kp LG(LS(Z))         &none             &kp LG(C)           &kp LG(X)                 &kp LG(V)             &none
+                                     &to 0                      &kp LEFT_SHIFT          &gqt LS(ENTER) ENTER  &kp SPACE         &kp BACKSPACE       &tap_dance_homerow
+&none          &none                 &none                      &none                   &none                 &none             &none               &none                     &none                 &none
             >;
         };
 
