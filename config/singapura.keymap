@@ -248,13 +248,6 @@
             tapping-term-ms = <200>;
             bindings = <&to 1>, <&to 2>, <&to 3>;
         };
-
-        tap_dance_homerow: tap_dance_homerow {
-            compatible = "zmk,behavior-tap-dance";
-            label = "TAP_DANCE_HOMEROW";
-            #binding-cells = <0>;
-            bindings = <&kp LS(LA(LC(LG(SQT))))>, <&kp LS(LA(LC(LG(SLASH))))>;
-        };
     };
 
     macros {
@@ -290,8 +283,8 @@
             bindings = <
 &kp PAGE_UP    &marco_task_switcher  &gqt LG(LEFT) LS(LC(TAB))  &gqt LG(RIGHT) LC(TAB)  &kp LG(Z)             &kp LS(LA(LEFT))  &kp LA(LEFT)        &gqt LG(UP_ARROW) UP_ARROW  &kp LA(RIGHT)         &kp LS(LA(RIGHT))
 &kp PAGE_DOWN  &kp LEFT_SHIFT        &sk LEFT_ALT               &sk LEFT_GUI            &sk LCTRL             &kp LS(LG(LEFT))  &gqt LG(LEFT) LEFT  &gqt LG(DOWN_ARROW) DOWN    &gqt LG(RIGHT) RIGHT  &kp LS(LG(RIGHT))
-&none          &kp LG(X)             &kp LG(C)                  &kp LG(V)               &kp LG(LS(Z))         &none             &kp LG(C)           &kp LG(X)                   &kp LG(V)             &none
-                                     &to 0                      &kp LEFT_SHIFT          &gqt LS(ENTER) ENTER  &kp SPACE         &kp BACKSPACE       &tap_dance_homerow
+&none          &kp LG(X)             &kp LG(C)                  &kp LG(V)               &kp LG(LS(Z))         &none             &kp LG(C)           &kp LG(X)                   &kp LG(V)             &kp LA(LC(LG(LS(W))))
+                                     &to 0                      &kp LEFT_SHIFT          &gqt LS(ENTER) ENTER  &kp SPACE         &kp BACKSPACE       &kp LA(LG(LC(LS(Q))))
 &none          &none                 &none                      &none                   &none                 &none             &none               &none                       &none                 &none
             >;
         };
