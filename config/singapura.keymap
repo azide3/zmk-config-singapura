@@ -171,13 +171,13 @@
 
         combo_leftscreen {
             timeout-ms = <25>;
-            bindings = <&kp LC(LS(F7))>;
+            bindings = <&kp F7>;
             key-positions = <0 10>;
         };
 
         combo_rightscreen {
             timeout-ms = <25>;
-            bindings = <&kp LC(F9)>;
+            bindings = <&kp F9>;
             key-positions = <4 14>;
         };
 
