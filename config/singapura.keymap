@@ -230,7 +230,7 @@
 
         combo_homerow_scroll {
             bindings = <&kp LA(LC(LG(W)))>;
-            key-positions = <35 29>;
+            key-positions = <19 34>;
         };
     };
 
