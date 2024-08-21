@@ -232,6 +232,16 @@
             bindings = <&kp LA(LC(LG(W)))>;
             key-positions = <19 34>;
         };
+
+        combo_homerow_search {
+            bindings = <&kp LA(LC(LG(Q)))>;
+            key-positions = <35 30>;
+        };
+
+        combo_moom_toggle {
+            bindings = <&kp LA(LC(LG(E)))>;
+            key-positions = <9 8>;
+        };
     };
 
     behaviors {
@@ -288,7 +298,7 @@
             bindings = <
 &kp PAGE_UP    &kp LG(TAB)     &gqt LG(LEFT) LS(LC(TAB))  &gqt LG(RIGHT) LC(TAB)  &kp LG(Z)             &kp LS(LA(LEFT))  &kp LA(LEFT)        &gqt LG(UP_ARROW) UP_ARROW  &kp LA(RIGHT)         &kp LS(LA(RIGHT))
 &kp PAGE_DOWN  &kp LEFT_SHIFT  &sk LEFT_ALT               &sk LEFT_GUI            &sk LCTRL             &kp LS(LG(LEFT))  &gqt LG(LEFT) LEFT  &gqt LG(DOWN_ARROW) DOWN    &gqt LG(RIGHT) RIGHT  &kp LS(LG(RIGHT))
-&to 2          &kp LG(X)       &kp LG(C)                  &kp LG(V)               &kp LG(LS(Z))         &none             &kp LA(LC(LG(E)))   &none                       &none                 &kp LA(LG(LC(R)))
+&to 2          &kp LG(X)       &kp LG(C)                  &kp LG(V)               &kp LG(LS(Z))         &none             &none               &none                       &none                 &kp LA(LG(LC(R)))
                                &to 0                      &kp LEFT_SHIFT          &gqt LS(ENTER) ENTER  &kp SPACE         &kp BACKSPACE       &kp LA(LG(LC(Q)))
 &none          &none           &none                      &none                   &none                 &none             &none               &none                       &none                 &none
             >;
