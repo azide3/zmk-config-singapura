@@ -307,7 +307,7 @@
         mouse {
             bindings = <
 &kp PAGE_UP    &kp LG(W)  &gqt LG(LEFT) LC(LS(TAB))  &gqt LG(RIGHT) LC(TAB)  &mwh SCROLL_UP    &kp PAGE_UP    &mwh SCROLL_LEFT  &mmv MOVE_UP    &mwh SCROLL_RIGHT  &mwh SCROLL_UP
-&kp PAGE_DOWN  &none      &mkp RCLK                  &mkp LCLK               &mwh SCROLL_DOWN  &kp PAGE_DOWN  &mmv MOVE_LEFT    &mmv MOVE_DOWN  &mmv MOVE_RIGHT    &mwh SCROLL_DOWN
+&kp PAGE_DOWN  &mkp MB3   &mkp RCLK                  &mkp LCLK               &mwh SCROLL_DOWN  &kp PAGE_DOWN  &mmv MOVE_LEFT    &mmv MOVE_DOWN  &mmv MOVE_RIGHT    &mwh SCROLL_DOWN
 &none          &kp LG(X)  &kp LG(C)                  &kp LG(V)               &none             &none          &none             &none           &none              &none
                           &to 0                      &none                   &none             &mkp LCLK      &mkp RCLK         &to 0
 &none          &none      &none                      &none                   &none             &none          &none             &none           &none              &none
