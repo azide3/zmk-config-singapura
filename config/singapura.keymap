@@ -240,7 +240,7 @@
 
         combo_moom_toggle {
             bindings = <&kp LA(LC(LG(E)))>;
-            key-positions = <9 8>;
+            key-positions = <1 2>;
         };
     };
 
