@@ -286,11 +286,11 @@
 
         qwerty {
             bindings = <
-&gqt TILDE Q  &kp W         &gqt LG(E) E  &kp R            &gqt LG(T) T          &gqt LG(Y) Y          &kp U                         &kp I                    &kp O                   &gqt SINGLE_QUOTE P
-&gqt LG(A) A  &gqt LG(S) S  &gqt TAB D    &gqt LEFT_GUI F  &gqt LEFT_ALT G       &gqt LEFT_ALT H       &kp J                         &kp K                    &kp L                   &gqt MINUS SEMI
-&kp Z         &kp X         &gqt LG(C) C  &gqt LG(V) V     &gqt LG(B) B          &gqt LG(N) N          &kp M                         &gqt LEFT_BRACKET COMMA  &gqt RIGHT_BRACKET DOT  &gqt BACKSLASH SLASH
-                            &mo 1         &kp LSHIFT       &gqt LS(ENTER) ENTER  &gqt LG(SPACE) SPACE  &gqt LG(BACKSPACE) BACKSPACE  &to 1
-&trans        &trans        &trans        &trans           &trans                &trans                &trans                        &trans                   &trans                  &trans
+&gqt TILDE Q  &kp W   &kp E         &kp R            &kp T                 &kp Y                 &kp U                         &kp I                    &kp O                   &gqt SINGLE_QUOTE P
+&kp A         &kp S   &gqt TAB D    &gqt LEFT_GUI F  &gqt LEFT_ALT G       &gqt LEFT_ALT H       &kp J                         &kp K                    &kp L                   &gqt MINUS SEMI
+&kp Z         &kp X   &gqt LG(C) C  &gqt LG(V) V     &gqt LG(B) B          &gqt LG(N) N          &kp M                         &gqt LEFT_BRACKET COMMA  &gqt RIGHT_BRACKET DOT  &gqt BACKSLASH SLASH
+                      &mo 1         &kp LSHIFT       &gqt LS(ENTER) ENTER  &gqt LG(SPACE) SPACE  &gqt LG(BACKSPACE) BACKSPACE  &to 1
+&trans        &trans  &trans        &trans           &trans                &trans                &trans                        &trans                   &trans                  &trans
             >;
         };
 
