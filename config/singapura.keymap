@@ -234,11 +234,13 @@
         };
 
         combo_homerow_search {
+            timeout-ms = <25>;
             bindings = <&kp LA(LC(LG(Q)))>;
             key-positions = <35 30>;
         };
 
         combo_moom_toggle {
+            timeout-ms = <25>;
             bindings = <&kp LA(LC(LG(E)))>;
             key-positions = <1 2>;
         };
